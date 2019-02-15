@@ -236,3 +236,31 @@ def is_duplicate_there2(list_a,list_b):
             return True
     return False
 
+
+#start Game of Life
+class Cell():
+
+  def say_hello(self):
+    print("Hello I am a cell")
+
+  def give_name(self,a_name):
+    self.name = a_name #self.name; das self bezieht sich auf die function, damit python weiss, dass der name von self ist
+
+  def give_age(self,an_age):
+    self.age = an_age
+
+  def make_cell_older(self):
+    self.age = self.age + 1
+
+
+c = Cell() #eine neue zelle schaffen
+c.say_hello() #das "c." bezieht sich auf die zelle c
+c.give_name("Alice")
+c.give_age(12)
+c.make_cell_older() #hier muss keine zahl rein, weil das alter gegeben und die function bestimmt, dass die zelle um ein jahr altert
+
+d = Cell()
+d.say_hello()
+d.give_name("Bob")
+d.give_age(2)
+d.make_cell_older()
